@@ -1,0 +1,26 @@
+<script>
+
+	var pulaLinha = function() {
+		document.write("<br>")
+	}
+
+	var mostra = function(teste) {
+		document.write(teste)
+		pulaLinha()
+	}
+
+	var calculaIMC = function(altura, peso) {
+		var imc = peso / (altura * altura)
+		return imc 	
+	}
+
+	var nome = prompt("Bom dia! Qual o seu nome?")
+	var pesoDoUsuario = prompt(nome + ", qual o seu peso?")
+	var alturaDoUsuario = prompt(nome + ", e a sua altura?")
+	var imcDoUsuario = calculaIMC(alturaDoUsuario, pesoDoUsuario)
+
+	mostra("O imc do usuário é " + Math.round(imcDoUsuario))
+	mostra("O usuário ainda está " + Math.round(imcDoUsuario - 18.5) + " pontos acima do limite da magreza.")
+	mostra("O usuário ainda está " + Math.round(35 - imcDoUsuario) + " pontos abaixo do limite de obesidade severá.")	
+
+</script>
